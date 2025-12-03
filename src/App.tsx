@@ -1,5 +1,5 @@
 import './App.css'
-import {BrowserRouter, Link, NavLink, Route, Routes} from "react-router-dom";
+import {HashRouter, Link, NavLink, Route, Routes} from "react-router-dom";
 import MapComponent from "./routes/basic/MapComponent.tsx";
 import MapComponentHook from "./routes/custom-hook/MapComponent.tsx";
 import MapComponentContext from "./routes/context/MapComponent.tsx";
@@ -8,7 +8,7 @@ import MapComponentLib from "./routes/react-map-gl/MapComponent.tsx";
 
 function App() {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <nav style={{display: 'flex', gap: "12px"}}>
                 <Link to="/">トップに戻る</Link>
                 <NavLink
@@ -61,7 +61,7 @@ function App() {
                 <Route path="/class" element={<MapComponentClass/>}></Route>
                 <Route path="/lib" element={<MapComponentLib/>}></Route>
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 
